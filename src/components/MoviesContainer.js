@@ -1,7 +1,16 @@
+import { useOutletContext } from "react-router-dom"
+import MovieCard from "./MovieCard"
+
 function MoviesContainer(){
+
+    const {myMovies, setMyMovies}= useOutletContext()
+    const movieComponents= myMovies.map(movie => {
+        return <MovieCard key= {movie.id} movie={movie}/>
+    })
+
     return(
         <div className="container">
-            MoviesContainer
+            {movieComponents}
         </div>
     )
 }
