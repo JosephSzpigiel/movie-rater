@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 function MovieCard({imdbObj, movie, setMyMovies}){
 
@@ -8,7 +8,7 @@ function MovieCard({imdbObj, movie, setMyMovies}){
     
 
     function clickHandler(e){
-        if(movieDetails.id){
+        if(movieDetails.Plot){
             setShowDetails(current => !current)
         }else{
             fetch(`https://www.omdbapi.com/?i=${imdbID}&type=movie&apikey=c9f1eed`)
