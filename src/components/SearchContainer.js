@@ -5,7 +5,7 @@ import {useOutletContext} from "react-router-dom"
 
 function SearchContainer(){
 
-    const {setMyMovies} = useOutletContext()
+    const {setMyMovies, myMovies} = useOutletContext()
     const [search, setSearch] = useState('')
     const [results, setResults] =useState([])
 
@@ -23,7 +23,7 @@ function SearchContainer(){
     }
 
     const movieComponents = results.map((movie) => {
-        return <MovieCard key= {movie.imdbID} movie={movie} setMyMovies={setMyMovies}/>
+        return <MovieCard key= {movie.imdbID} movie={movie} setMyMovies={setMyMovies} myMovies={myMovies}/>
     })
 
 

@@ -5,7 +5,7 @@ function MoviesContainer(){
 
     const {myMovies, setMyMovies}= useOutletContext()
     const movieComponents= myMovies.map(movie => {
-        return <MovieCard key= {movie.id} movie={movie}/>
+        return <MovieCard key= {movie.id} movie={movie} setMyMovies= {setMyMovies} myMovies={myMovies}/>
     })
 
     return(

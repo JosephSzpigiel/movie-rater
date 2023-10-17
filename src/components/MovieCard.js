@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-function MovieCard({movie, setMyMovies}){
+function MovieCard({myMovies, movie, setMyMovies}){
 
     let initialValue= {}
     if (movie.Title) {
@@ -11,7 +11,13 @@ function MovieCard({movie, setMyMovies}){
     const [movieDetails, setMovieDetails] = useState(initialValue)
     const {Poster, Title, Year, imdbID} = movie
     
+    const imdbObj= {}
+    for (let i=0; i< myMovies.length; i++) {
+        imdbObj[myMovies[i].imdbID]= myMovies[i].id
+    }
 
+
+    console.log(imdbObj)
 
 
     function clickHandler(e){
@@ -28,14 +34,33 @@ function MovieCard({movie, setMyMovies}){
 
     function submitHandler(e){
         e.preventDefault()
-        fetch('http://localhost:3000/Movies', {
-            method: 'POST',
-            headers: {'Content-type': 'application/json'},
-            body: JSON.stringify(movieDetails)
-        })
-        .then(r => r.json())
-        .then(movie => setMyMovies(movies => [...movies, movie]))
-        
+        if (movieDetails.rating !== '') {
+            fetch(`http://localhost:3000/Movies/${imdbObj[movie.imdbID]}`, {
+                method: 'PATCH',
+                headers: {'Content-type': 'application/json'},
+                body: JSON.stringify({'rating': movieDetails.rating}) 
+            })
+            .then(r => r.json())
+            .then(movie => {
+                setMyMovies(movies => {
+                    return (movies.map((arrayMovie) => {
+                        if (arrayMovie.id === movie.id) {
+                            return{ ...arrayMovie, ['rating']: movie.rating}
+                        } else {
+                            return arrayMovie
+                        }
+                    }))
+                })
+            }) 
+        } else{
+            fetch('http://localhost:3000/Movies', {
+                method: 'POST',
+                headers: {'Content-type': 'application/json'},
+                body: JSON.stringify(movieDetails)
+            })
+            .then(r => r.json())
+            .then(movie => setMyMovies(movies => [...movies, movie]))
+        }
     }
 
     function ratingHandler(e){
@@ -44,10 +69,24 @@ function MovieCard({movie, setMyMovies}){
         })
     }
 
+    function handleRemove(e) {
+        fetch(`http://localhost:3000/Movies/${movie.id}`, {
+            method: 'DELETE'
+        })
+        .then(r => {
+            setMyMovies(current => {
+                return current.filter(currMovie => {
+                    return currMovie.id !== movie.id
+                })
+            })
+        })
+    }
+
     return(
         <div className="movie-card, card">
             <h2>{Title}</h2>
             <img className='movie-image' src={Poster} onClick={clickHandler} sizes="auto"></img>
+            {movie.id ? <button onClick={handleRemove}>Remove</button> : null}
             <p>{Year}</p>
             {
                 showDetails ? (
