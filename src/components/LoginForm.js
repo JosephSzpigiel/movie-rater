@@ -3,6 +3,7 @@ import { useState } from "react"
 function LoginForm({userObj, setCurrentUser}){
 
     const initialValue = {'username': '', 'password': ''}
+    
     const [userInfo, setUserInfo] = useState(initialValue)
 
     function handleChange(e){
