@@ -1,9 +1,11 @@
 import { useState } from "react"
 
 import MovieCard from "./MovieCard"
+import {useOutletContext} from "react-router-dom"
 
-function SearchContainer({setMyMovies}){
+function SearchContainer(){
 
+    const {setMyMovies} = useOutletContext()
     const [search, setSearch] = useState('')
     const [results, setResults] =useState([])
 

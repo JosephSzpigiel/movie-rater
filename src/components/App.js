@@ -1,18 +1,26 @@
 import '../App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Header from './Header';
 import SearchContainer from './SearchContainer';
 import MoviesContainer from './MoviesContainer';
+import {Outlet} from 'react-router-dom'
 
 
 function App() {
+
   const [myMovies, setMyMovies] = useState([])
+
+  useEffect(()=> {
+    fetch('http://localhost:3000/Movies')
+    .then(r => r.json())
+    .then(movies => setMyMovies(movies))
+  }, [])
+
   return (
     <div className="App">
       <Header />
-      <SearchContainer setMyMovies={setMyMovies}/>
-      <MoviesContainer myMovies={myMovies}/>
+      <Outlet context= {{myMovies, setMyMovies}}/>
     </div>
   );
 }

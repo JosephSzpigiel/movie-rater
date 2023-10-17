@@ -2,10 +2,17 @@ import { useEffect, useState } from "react"
 
 function MovieCard({movie, setMyMovies}){
 
-    const [showDetails, setShowDetails] = useState(false)
-    const [movieDetails, setMovieDetails] = useState({})
+    let initialValue= {}
+    if (movie.Title) {
+        initialValue= movie
+    }
 
+    const [showDetails, setShowDetails] = useState(false)
+    const [movieDetails, setMovieDetails] = useState(initialValue)
     const {Poster, Title, Year, imdbID} = movie
+    
+
+
 
     function clickHandler(e){
         if(movieDetails.Title){
@@ -21,7 +28,14 @@ function MovieCard({movie, setMyMovies}){
 
     function submitHandler(e){
         e.preventDefault()
-        setMyMovies(movies => [...movies, movieDetails])
+        fetch('http://localhost:3000/Movies', {
+            method: 'POST',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify(movieDetails)
+        })
+        .then(r => r.json())
+        .then(movie => setMyMovies(movies => [...movies, movie]))
+        
     }
 
     function ratingHandler(e){
