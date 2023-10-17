@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function CreateUserForm({userObj, setUserObj}){
+function CreateUserForm({userObj, setUserObj, setCurrentUser}){
 
     const initialValue = {'username': '', 'password': ''}
 
@@ -33,6 +33,7 @@ function CreateUserForm({userObj, setUserObj}){
                 setUserObj(curr => {
                     return {...curr, [user.username]: user.password}
                 })
+                setCurrentUser(user)
                 console.log(`Welcome ${user.username}! Password ${user.password} ID: ${user.id}`)
             })
             
@@ -42,7 +43,7 @@ function CreateUserForm({userObj, setUserObj}){
     return(
         <form onSubmit={handleCreate}>
             <input required name= 'username' value = {userInfo.username} onChange = {handleChange} placeholder="User Name"/>
-            <input required = 'password' value = {userInfo.password} onChange = {handleChange} type= "password" placeholder="Password"/>
+            <input required name= 'password' value = {userInfo.password} onChange = {handleChange} type= "password" placeholder="Password"/>
             <input type="submit" value="Submit"/>
         </form>
     )

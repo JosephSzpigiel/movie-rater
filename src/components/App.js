@@ -6,7 +6,8 @@ import {Outlet} from 'react-router-dom'
 
 
 function App() {
-
+  
+  const [currentUser, setCurrentUser] = useState({})
   const [myMovies, setMyMovies] = useState([])
   const [results, setResults] = useState([])
   const [searchVal, setSearchVal] = useState('')
@@ -35,10 +36,24 @@ function App() {
     .then(movies => setMyMovies(movies))
   }, [])
 
+  const contextObj = {
+    myMovies, 
+    setMyMovies, 
+    imdbObj, 
+    results, 
+    setResults, 
+    searchVal, 
+    setSearchVal, 
+    userObj, 
+    setUserObj, 
+    setCurrentUser, 
+    currentUser
+  }
+
   return (
     <div className="App">
-      <Header />
-      <Outlet context= {{myMovies, setMyMovies, imdbObj, results, setResults, searchVal, setSearchVal, userObj, setUserObj}}/>
+      <Header currentUser={currentUser}/>
+      <Outlet context= {contextObj}/>
     </div>
   );
 }
