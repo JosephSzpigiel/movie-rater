@@ -3,9 +3,9 @@ import MovieCard from "./MovieCard"
 
 function MoviesContainer(){
 
-    const {myMovies, setMyMovies}= useOutletContext()
+    const {myMovies, setMyMovies, imdbObj}= useOutletContext()
     const movieComponents= myMovies.map(movie => {
-        return <MovieCard key= {movie.id} movie={movie} setMyMovies= {setMyMovies} myMovies={myMovies}/>
+        return <MovieCard key= {movie.id} movie={movie} setMyMovies= {setMyMovies} imdbObj={imdbObj}/>
     })
 
     return(

@@ -1,27 +1,14 @@
 import { useEffect, useState } from "react"
 
-function MovieCard({myMovies, movie, setMyMovies}){
-
-    let initialValue= {}
-    if (movie.Title) {
-        initialValue= movie
-    }
+function MovieCard({imdbObj, movie, setMyMovies}){
 
     const [showDetails, setShowDetails] = useState(false)
-    const [movieDetails, setMovieDetails] = useState(initialValue)
+    const [movieDetails, setMovieDetails] = useState(movie)
     const {Poster, Title, Year, imdbID} = movie
     
-    const imdbObj= {}
-    for (let i=0; i< myMovies.length; i++) {
-        imdbObj[myMovies[i].imdbID]= myMovies[i].id
-    }
-
-
-    console.log(imdbObj)
-
 
     function clickHandler(e){
-        if(movieDetails.Title){
+        if(movieDetails.id){
             setShowDetails(current => !current)
         }else{
             fetch(`https://www.omdbapi.com/?i=${imdbID}&type=movie&apikey=c9f1eed`)
@@ -34,8 +21,8 @@ function MovieCard({myMovies, movie, setMyMovies}){
 
     function submitHandler(e){
         e.preventDefault()
-        if (movieDetails.rating !== '') {
-            fetch(`http://localhost:3000/Movies/${imdbObj[movie.imdbID]}`, {
+        if (imdbID in imdbObj) {
+            fetch(`http://localhost:3000/Movies/${imdbObj[imdbID]}`, {
                 method: 'PATCH',
                 headers: {'Content-type': 'application/json'},
                 body: JSON.stringify({'rating': movieDetails.rating}) 
