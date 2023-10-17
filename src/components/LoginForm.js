@@ -3,7 +3,7 @@ import { useState } from "react"
 function LoginForm({userObj, setCurrentUser}){
 
     const initialValue = {'username': '', 'password': ''}
-    
+
     const [userInfo, setUserInfo] = useState(initialValue)
 
     function handleChange(e){
@@ -24,10 +24,10 @@ function LoginForm({userObj, setCurrentUser}){
             if(userInfo.password === userObj[userInfo.username]){
                 setCurrentUser(userInfo)
             }else{
-                console.log('Error! Incorrect password!')
+                alert('Error! Incorrect password!')
             }
         }else{
-            console.log('Error! No user with than name!')
+            alert('Error! No user with than name!')
         }
     }
 

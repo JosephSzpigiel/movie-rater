@@ -21,7 +21,7 @@ function CreateUserForm({userObj, setUserObj, setCurrentUser}){
     function handleCreate(e){
         e.preventDefault()
         if(userInfo.username in userObj){
-            console.log('Error! User Already Exists!')
+            alert('Error! User Already Exists!')
         }else{
             fetch('http://localhost:3000/Users', {
                 method: 'POST',
@@ -34,7 +34,6 @@ function CreateUserForm({userObj, setUserObj, setCurrentUser}){
                     return {...curr, [user.username]: user.password}
                 })
                 setCurrentUser(user)
-                console.log(`Welcome ${user.username}! Password ${user.password} ID: ${user.id}`)
             })
             
         }
