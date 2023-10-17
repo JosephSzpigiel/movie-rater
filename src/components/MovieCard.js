@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-function MovieCard({movie}){
+function MovieCard({movie, setMyMovies}){
 
     const [showDetails, setShowDetails] = useState(false)
     const [movieDetails, setMovieDetails] = useState({})
@@ -14,10 +14,21 @@ function MovieCard({movie}){
             fetch(`https://www.omdbapi.com/?i=${imdbID}&type=movie&apikey=c9f1eed`)
             .then(r => r.json())
             .then(movie => {
-                setMovieDetails(movie)
+                setMovieDetails({...movie,"rating":''})
                 setShowDetails(current => !current)
         })
     }}
+
+    function submitHandler(e){
+        e.preventDefault()
+        setMyMovies(movies => [...movies, movieDetails])
+    }
+
+    function ratingHandler(e){
+        setMovieDetails(curr => {
+            return {...curr, 'rating':e.target.value}
+        })
+    }
 
     return(
         <div className="movie-card, card">
@@ -26,12 +37,14 @@ function MovieCard({movie}){
             <p>{Year}</p>
             {
                 showDetails ? (
-                    <form>
-                        <label htmlFor='rating'>Rating from 1-100:</label>
-                        <input name ='rating' type="number" min={1} max={100}></input>
-                        <input type="submit"></input>
+                    <div>
+                        <form onSubmit={submitHandler}>
+                            <label htmlFor='rating'>Rating from 1-100:</label>
+                            <input name ='rating' type="number" min={1} max={100} value={movieDetails.rating} onChange={ratingHandler}></input>
+                            <input type="submit"></input>
+                        </form> 
                         <p>Plot: {movieDetails.Plot}</p>
-                    </form> 
+                    </div>
                 ) : null
             }
         </div>

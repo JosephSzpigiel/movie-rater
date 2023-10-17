@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import MovieCard from "./MovieCard"
 
-function SearchContainer(){
+function SearchContainer({setMyMovies}){
 
     const [search, setSearch] = useState('')
     const [results, setResults] =useState([])
@@ -21,7 +21,7 @@ function SearchContainer(){
     }
 
     const movieComponents = results.map((movie) => {
-        return <MovieCard key= {movie.imdbID} movie={movie}/>
+        return <MovieCard key= {movie.imdbID} movie={movie} setMyMovies={setMyMovies}/>
     })
 
 
