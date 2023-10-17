@@ -11,7 +11,7 @@ function MovieCard({imdbObj, movie, setMyMovies}){
         if(movieDetails.Plot){
             setShowDetails(current => !current)
         }else{
-            fetch(`https://www.omdbapi.com/?i=${imdbID}&type=movie&apikey=c9f1eed`)
+            fetch(`https://www.omdbapi.com/?i=${imdbID}&type=movie&apikey=${process.env.REACT_APP_API_KEY}`)
             .then(r => r.json())
             .then(movie => {
                 setMovieDetails({...movie,"rating":''})

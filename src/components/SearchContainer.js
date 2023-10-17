@@ -11,7 +11,7 @@ function SearchContainer(){
     function submitHandler(e) {
         e.preventDefault()
 
-        fetch(`https://www.omdbapi.com/?s=${search}&type=movie&apikey=c9f1eed`)
+        fetch(`https://www.omdbapi.com/?s=${search}&type=movie&apikey=${process.env.REACT_APP_API_KEY}`)
         .then(r => r.json())
         .then(movies => setResults(movies.Search))
         setSearchVal(search)
