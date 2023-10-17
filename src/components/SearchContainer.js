@@ -5,9 +5,8 @@ import {useOutletContext} from "react-router-dom"
 
 function SearchContainer(){
 
-    const {setMyMovies} = useOutletContext()
+    const {setMyMovies, imdbObj, results, setResults, searchVal, setSearchVal} = useOutletContext()
     const [search, setSearch] = useState('')
-    const [results, setResults] =useState([])
 
     function submitHandler(e) {
         e.preventDefault()
@@ -15,6 +14,7 @@ function SearchContainer(){
         fetch(`https://www.omdbapi.com/?s=${search}&type=movie&apikey=c9f1eed`)
         .then(r => r.json())
         .then(movies => setResults(movies.Search))
+        setSearchVal(search)
         setSearch('')
     }
 
@@ -23,7 +23,7 @@ function SearchContainer(){
     }
 
     const movieComponents = results.map((movie) => {
-        return <MovieCard key= {movie.imdbID} movie={movie} setMyMovies={setMyMovies}/>
+        return <MovieCard key= {movie.imdbID} movie={movie} setMyMovies={setMyMovies} imdbObj={imdbObj}/>
     })
 
 
@@ -33,6 +33,7 @@ function SearchContainer(){
                 <input placeholder="Search Movie" value={search} onChange={changeHandler}></input>
                 <input type="submit"></input>
             </form>
+            {(searchVal !== '')? <h2>Results: {`${searchVal}`}</h2> : null}
             <div className='container'>{movieComponents}</div>
         </div>
     )
