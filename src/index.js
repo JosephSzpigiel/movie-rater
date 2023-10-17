@@ -6,12 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MoviesContainer from './components/MoviesContainer';
 import SearchContainer from './components/SearchContainer';
+import LoginPage from './components/LoginPage'
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <App />,
       children: [
+        {
+          path: "/",
+          element: <LoginPage />
+        },
         {
             path: "/search",
             element: <SearchContainer />

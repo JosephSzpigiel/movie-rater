@@ -1,0 +1,51 @@
+import { useState } from "react"
+
+function CreateUserForm({userObj, setUserObj}){
+
+    const initialValue = {'username': '', 'password': ''}
+
+    const [userInfo, setUserInfo] = useState(initialValue)
+
+    function handleChange(e){
+        if (e.target.name === 'username'){
+            setUserInfo(current => {
+                return {...current, ['username']:e.target.value}
+            })
+        } else {
+            setUserInfo(current => {
+                return {...current, ['password']:e.target.value}
+            })
+        }
+    }
+
+    function handleCreate(e){
+        e.preventDefault()
+        if(userInfo.username in userObj){
+            console.log('Error! User Already Exists!')
+        }else{
+            fetch('http://localhost:3000/Users', {
+                method: 'POST',
+                headers: {'Content-Type' : 'application/json'},
+                body: JSON.stringify(userInfo)
+            })
+            .then(r=>r.json())
+            .then(user => {
+                setUserObj(curr => {
+                    return {...curr, [user.username]: user.password}
+                })
+                console.log(`Welcome ${user.username}! Password ${user.password} ID: ${user.id}`)
+            })
+            
+        }
+    }
+
+    return(
+        <form onSubmit={handleCreate}>
+            <input required name= 'username' value = {userInfo.username} onChange = {handleChange} placeholder="User Name"/>
+            <input required = 'password' value = {userInfo.password} onChange = {handleChange} type= "password" placeholder="Password"/>
+            <input type="submit" value="Submit"/>
+        </form>
+    )
+}
+
+export default CreateUserForm

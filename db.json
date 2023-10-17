@@ -259,5 +259,21 @@
       "id": 8
     }
   ],
-  "Users": []
+  "Users": [
+    {
+      "username": "test",
+      "password": "test",
+      "id": 1
+    },
+    {
+      "username": "test2",
+      "password": "test",
+      "id": 2
+    },
+    {
+      "username": "test4",
+      "password": "test",
+      "id": 3
+    }
+  ]
 }
