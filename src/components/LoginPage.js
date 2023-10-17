@@ -6,10 +6,19 @@ function LoginPage(){
 
     const {userObj, setUserObj, currentUser, setCurrentUser} = useOutletContext()
 
+    function handleLogout(e){
+        setCurrentUser({})
+    }
+
     return(
         <div>
-            {(currentUser.username) ? (<h2> Welcome {currentUser.username}!</h2>)
-                : (
+            {(currentUser.username) ? (
+                <div>
+                    <h2> Welcome {currentUser.username}!</h2>
+                    <button onClick={handleLogout}>Logout</button>
+                </div>
+            )
+            : (
                 <div>
                     <h2>Login:</h2>
                     <LoginForm userObj={userObj} setUserObj={setUserObj} setCurrentUser={setCurrentUser}/>
