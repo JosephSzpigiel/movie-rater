@@ -22,7 +22,7 @@ code {
   text-align: center;
   padding: 10px;
   margin: 15px;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 .card img:hover {  border:2px solid green;  box-shadow: 0 0 10px #333;  -webkit-box-shadow: 0 0 10px #333;  -moz-box-shadow: 0 0 10px #333;  -o-box-shadow: 0 0 10px #333;  -ms-box-shadow: 0 0 10px #333;}
 
