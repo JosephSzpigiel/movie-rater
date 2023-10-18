@@ -79,7 +79,8 @@
       "rating_test": "6",
       "id": 2,
       "rating_yshp57@gmail.com": "5",
-      "rating_tester": "100"
+      "rating_tester": "100",
+      "rating_test words": "3"
     }
   ],
   "Users": [
@@ -117,6 +118,11 @@
       "username": "tester",
       "password": "test",
       "id": 7
+    },
+    {
+      "username": "test words",
+      "password": "test",
+      "id": 8
     }
   ]
 }
