@@ -9,7 +9,7 @@ function NavBar() {
           /* add styling to Navlink */
           className="nav-link"
         >
-          Home
+          Login
         </NavLink>
         <NavLink
           to="/search"

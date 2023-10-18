@@ -1,10 +1,11 @@
 import NavBar from "./NavBar"
 
-function Header(){
+function Header({currentUser}){
     return(
         <header>
             <h1>MovieRater</h1>
             <NavBar />
+            {currentUser.username ? <p><b>User: </b>{currentUser.username}</p>: null }
         </header>
     )
 }
