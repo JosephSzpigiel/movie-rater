@@ -4,11 +4,12 @@ import {useOutletContext} from "react-router-dom"
 
 function LoginPage(){
 
-    const {userObj, setUserObj, currentUser, setCurrentUser, setResults, setSearchVal} = useOutletContext()
+    const {userObj, setUserObj, currentUser, setCurrentUser, setResults, setSearchVal, setError} = useOutletContext()
 
     function handleLogout(e){
         setCurrentUser({})
         setSearchVal('')
+        setError('')
         setResults([])
     }
 

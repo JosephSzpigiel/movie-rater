@@ -12,6 +12,7 @@ function App() {
   const [results, setResults] = useState([])
   const [searchVal, setSearchVal] = useState('')
   const [userObj, setUserObj] = useState({})
+  const [error, setError] = useState('')
 
   const imdbObj= {}
   for (let i=0; i< myMovies.length; i++) {
@@ -54,7 +55,9 @@ function App() {
     setUserObj, 
     setCurrentUser, 
     currentUser,
-    userMovies
+    userMovies,
+    error, 
+    setError
   }
 
   return (
