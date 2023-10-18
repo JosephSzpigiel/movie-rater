@@ -1,150 +1,6 @@
 {
   "Movies": [
     {
-      "Title": "Guardians of the Galaxy Vol. 2",
-      "Year": "2017",
-      "Rated": "PG-13",
-      "Released": "05 May 2017",
-      "Runtime": "136 min",
-      "Genre": "Action, Adventure, Comedy",
-      "Director": "James Gunn",
-      "Writer": "James Gunn, Dan Abnett, Andy Lanning",
-      "Actors": "Chris Pratt, Zoe Saldana, Dave Bautista",
-      "Plot": "The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father, the ambitious celestial being Ego.",
-      "Language": "English",
-      "Country": "United States",
-      "Awards": "Nominated for 1 Oscar. 15 wins & 60 nominations total",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
-      "Ratings": [
-        {
-          "Source": "Internet Movie Database",
-          "Value": "7.6/10"
-        },
-        {
-          "Source": "Rotten Tomatoes",
-          "Value": "85%"
-        },
-        {
-          "Source": "Metacritic",
-          "Value": "67/100"
-        }
-      ],
-      "Metascore": "67",
-      "imdbRating": "7.6",
-      "imdbVotes": "736,085",
-      "imdbID": "tt3896198",
-      "Type": "movie",
-      "DVD": "10 Jul 2017",
-      "BoxOffice": "$389,813,101",
-      "Production": "N/A",
-      "Website": "N/A",
-      "Response": "True",
-      "rating": "73",
-      "id": 1
-    },
-    {
-      "Title": "Si Buta dari Gua Hantu: Neraka Perut Bumi",
-      "Year": "1987",
-      "Rated": "N/A",
-      "Released": "N/A",
-      "Runtime": "90 min",
-      "Genre": "Action",
-      "Director": "Ratno Timoer",
-      "Writer": "Pitradjaya Burnama, Ganes Thair Santoso",
-      "Actors": "Nina Anwar, Advent Bangun, Enny Beatrice",
-      "Plot": "Raden Parna, a psychopathic and brutal Indonesian despot terrorizes and exploits the rural population. The cruel warlord demands sacrifices from the villagers, slaughtering them when they don't meet his demands.",
-      "Language": "Indonesian",
-      "Country": "Indonesia",
-      "Awards": "N/A",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BZTZlYTQ3NmYtNDA3ZC00NDNiLTk1MzYtMDg4MDExZTM5ODgwXkEyXkFqcGdeQXVyNDUxNjc5NjY@._V1_SX300.jpg",
-      "Ratings": [
-        {
-          "Source": "Internet Movie Database",
-          "Value": "5.8/10"
-        }
-      ],
-      "Metascore": "N/A",
-      "imdbRating": "5.8",
-      "imdbVotes": "69",
-      "imdbID": "tt0092667",
-      "Type": "movie",
-      "DVD": "N/A",
-      "BoxOffice": "N/A",
-      "Production": "N/A",
-      "Website": "N/A",
-      "Response": "True",
-      "rating": "67",
-      "id": 2
-    },
-    {
-      "Title": "Mo Amer: Mohammed in Texas",
-      "Year": "2021",
-      "Rated": "TV-MA",
-      "Released": "30 Nov 2021",
-      "Runtime": "64 min",
-      "Genre": "Comedy",
-      "Director": "Jay Chapman",
-      "Writer": "N/A",
-      "Actors": "Sajjad Dolati, Mohammed Amer",
-      "Plot": "Mohammed \"Mo\" Amer discusses pandemic politics, the stock market, cursing in Arabic, having two homes but no land, and more.",
-      "Language": "English",
-      "Country": "United States",
-      "Awards": "N/A",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMDI1Mjg5MTktNjZkOS00NzAyLWE1ZjYtMDg4ODM3M2U5YzI5XkEyXkFqcGdeQXVyMTA3MTI2ODc5._V1_SX300.jpg",
-      "Ratings": [
-        {
-          "Source": "Internet Movie Database",
-          "Value": "6.7/10"
-        }
-      ],
-      "Metascore": "N/A",
-      "imdbRating": "6.7",
-      "imdbVotes": "1,000",
-      "imdbID": "tt15845288",
-      "Type": "movie",
-      "DVD": "30 Nov 2021",
-      "BoxOffice": "N/A",
-      "Production": "N/A",
-      "Website": "N/A",
-      "Response": "True",
-      "rating": "12",
-      "id": 4
-    },
-    {
-      "Title": "Mo Amer: The Vagabond",
-      "Year": "2018",
-      "Rated": "TV-MA",
-      "Released": "08 Oct 2018",
-      "Runtime": "56 min",
-      "Genre": "Documentary, Comedy",
-      "Director": "Stan Lathan",
-      "Writer": "Mohammed Amer",
-      "Actors": "Mohammed Amer",
-      "Plot": "Arab-American comedian Mo Amer recounts his life as a refugee comic, from traveling with the name Mohammed to his long path to citizenship.",
-      "Language": "English",
-      "Country": "United States",
-      "Awards": "N/A",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMTc1NDQxNzU0M15BMl5BanBnXkFtZTgwODE0ODU0NjM@._V1_SX300.jpg",
-      "Ratings": [
-        {
-          "Source": "Internet Movie Database",
-          "Value": "7.3/10"
-        }
-      ],
-      "Metascore": "N/A",
-      "imdbRating": "7.3",
-      "imdbVotes": "1,045",
-      "imdbID": "tt9060526",
-      "Type": "movie",
-      "DVD": "N/A",
-      "BoxOffice": "N/A",
-      "Production": "N/A",
-      "Website": "N/A",
-      "Response": "True",
-      "rating": "17",
-      "id": 5
-    },
-    {
       "Title": "The Beta Test",
       "Year": "2021",
       "Rated": "Unrated",
@@ -183,80 +39,47 @@
       "Production": "N/A",
       "Website": "N/A",
       "Response": "True",
-      "rating": "23",
-      "id": 6
+      "userRating": "3",
+      "id": 1,
+      "rating_undefined": "",
+      "rating_test": "4",
+      "rating_yshp57@gmail.com": ""
     },
     {
-      "Title": "Test Pilot",
-      "Year": "1938",
-      "Rated": "Passed",
-      "Released": "22 Apr 1938",
-      "Runtime": "119 min",
-      "Genre": "Drama, Romance",
-      "Director": "Victor Fleming",
-      "Writer": "Vincent Lawrence, Waldemar Young, Frank Wead",
-      "Actors": "Clark Gable, Myrna Loy, Spencer Tracy",
-      "Plot": "Jim is a test pilot. His wife Ann and best friend Gunner try their best to keep him sober. But the life of a test pilot is anything but safe.",
-      "Language": "English",
-      "Country": "United States",
-      "Awards": "Nominated for 3 Oscars. 4 nominations total",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BNzQ2MmU5MGMtYWFhOC00YmY0LWE3NDctM2RkYTdiMDc3Y2JmXkEyXkFqcGdeQXVyMzg1ODEwNQ@@._V1_SX300.jpg",
-      "Ratings": [
-        {
-          "Source": "Internet Movie Database",
-          "Value": "6.8/10"
-        },
-        {
-          "Source": "Rotten Tomatoes",
-          "Value": "67%"
-        }
-      ],
-      "Metascore": "N/A",
-      "imdbRating": "6.8",
-      "imdbVotes": "2,606",
-      "imdbID": "tt0030848",
-      "Type": "movie",
-      "DVD": "16 Nov 2016",
-      "BoxOffice": "N/A",
-      "Production": "N/A",
-      "Website": "N/A",
-      "Response": "True",
-      "rating": "14",
-      "id": 7
-    },
-    {
-      "Title": "The Test",
-      "Year": "2012",
+      "Title": "Beta Test",
+      "Year": "2016",
       "Rated": "Not Rated",
-      "Released": "N/A",
-      "Runtime": "89 min",
-      "Genre": "Comedy",
-      "Director": "Jeremy Saville",
-      "Writer": "Jeremy Saville",
-      "Actors": "Jeremy Saville, Kelly Sullivan, Stephen Frejek",
-      "Plot": "A guy puts his unwitting bride-to-be through a series of increasingly bizarre \"stress tests\" to see if she's worthy of marriage.",
+      "Released": "22 Jul 2016",
+      "Runtime": "88 min",
+      "Genre": "Action, Sci-Fi, Thriller",
+      "Director": "Nicholas Gyeney",
+      "Writer": "Nicholas Gyeney, André Kirkman",
+      "Actors": "Manu Bennett, Larenz Tate, Linden Ashby",
+      "Plot": "Champion gamer Max Troy discovers events in a new video game are being mirrored in the real world, and must join forces with the game's protagonist, Orson Creed, to unravel the conspiracy before the game's sinister plot overwhelms...",
       "Language": "English",
       "Country": "United States",
       "Awards": "N/A",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMTYwNTgzMjM5M15BMl5BanBnXkFtZTcwNDUzMTE1OA@@._V1_SX300.jpg",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjcwYmExZTEtNzNmZS00OGQ5LThiMjctOGMzYzVkZjY5ODA0XkEyXkFqcGdeQXVyMTU2NTcxNDg@._V1_SX300.jpg",
       "Ratings": [
         {
           "Source": "Internet Movie Database",
-          "Value": "6.1/10"
+          "Value": "4.8/10"
         }
       ],
       "Metascore": "N/A",
-      "imdbRating": "6.1",
-      "imdbVotes": "1,192",
-      "imdbID": "tt1986180",
+      "imdbRating": "4.8",
+      "imdbVotes": "21,794",
+      "imdbID": "tt4244162",
       "Type": "movie",
-      "DVD": "25 Jul 2013",
-      "BoxOffice": "N/A",
+      "DVD": "02 Aug 2016",
+      "BoxOffice": "$10,104",
       "Production": "N/A",
       "Website": "N/A",
       "Response": "True",
-      "rating": "3",
-      "id": 8
+      "rating_test": "6",
+      "id": 2,
+      "rating_yshp57@gmail.com": "5",
+      "rating_tester": "100"
     }
   ],
   "Users": [
@@ -289,6 +112,11 @@
       "username": "testijvsdf",
       "password": "asdf",
       "id": 6
+    },
+    {
+      "username": "tester",
+      "password": "test",
+      "id": 7
     }
   ]
 }

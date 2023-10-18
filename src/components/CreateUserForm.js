@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function CreateUserForm({userObj, setUserObj, setCurrentUser}){
+function CreateUserForm({userObj, setUserObj, setCurrentUser, setResults, setSearchVal}){
 
     const initialValue = {'username': '', 'password': ''}
 
@@ -34,6 +34,8 @@ function CreateUserForm({userObj, setUserObj, setCurrentUser}){
                     return {...curr, [user.username]: user.password}
                 })
                 setCurrentUser(user)
+                setSearchVal('')
+                setResults([])
             })
             
         }

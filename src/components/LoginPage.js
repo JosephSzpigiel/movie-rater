@@ -4,10 +4,12 @@ import {useOutletContext} from "react-router-dom"
 
 function LoginPage(){
 
-    const {userObj, setUserObj, currentUser, setCurrentUser} = useOutletContext()
+    const {userObj, setUserObj, currentUser, setCurrentUser, setResults, setSearchVal} = useOutletContext()
 
     function handleLogout(e){
         setCurrentUser({})
+        setSearchVal('')
+        setResults([])
     }
 
     return(
@@ -21,9 +23,9 @@ function LoginPage(){
             : (
                 <div>
                     <h2>Login:</h2>
-                    <LoginForm userObj={userObj} setUserObj={setUserObj} setCurrentUser={setCurrentUser}/>
+                    <LoginForm userObj={userObj} setUserObj={setUserObj} setCurrentUser={setCurrentUser} setResults={setResults} setSearchVal={setSearchVal}/>
                     <h3>If you don't have an account, create a user here:</h3>
-                    <CreateUserForm userObj={userObj} setUserObj={setUserObj} setCurrentUser={setCurrentUser}/>
+                    <CreateUserForm userObj={userObj} setUserObj={setUserObj} setCurrentUser={setCurrentUser} setResults={setResults} setSearchVal={setSearchVal}/>
                 </div>
             )}
         </div>
