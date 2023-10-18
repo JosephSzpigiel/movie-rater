@@ -5,12 +5,13 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
     const [showDetails, setShowDetails] = useState(false)
     const [movieDetails, setMovieDetails] = useState(movie)
     const {Poster, Title, Year, imdbID} = movie
+    const [submitted, setSubmitted] = useState(false)
 
     const userRating = `rating_${currentUser.username}`
     const userComment= `comment_${currentUser.username}`
-    
 
     function clickHandler(e){
+        setSubmitted(false)
         if(movieDetails.Plot){
             setShowDetails(current => !current)
         }else{
@@ -46,6 +47,8 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
                         }
                     }))
                 })
+                setShowDetails(false)
+                setSubmitted(true)
             }) 
         } else{
             fetch('http://localhost:3000/Movies', {
@@ -54,7 +57,11 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
                 body: JSON.stringify(movieDetails)
             })
             .then(r => r.json())
-            .then(movie => setMyMovies(movies => [...movies, movie]))
+            .then(movie => {
+                setMyMovies(movies => [...movies, movie])
+                setShowDetails(false)
+                setSubmitted(true)
+            })
         }
     }
 
@@ -98,6 +105,7 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
                 <div>
                     <h3>Score: {movie[userRating]}/100</h3>
                 </div>): null}
+            {submitted ? <p>Submitted!</p>:null}
             {
                 showDetails ? (
                     <div>

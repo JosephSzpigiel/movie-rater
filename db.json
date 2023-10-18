@@ -42,9 +42,9 @@
       "userRating": "3",
       "id": 1,
       "rating_undefined": "",
-      "rating_test": "",
+      "rating_test": "35",
       "rating_yshp57@gmail.com": "",
-      "comment_test": ""
+      "comment_test": "df"
     },
     {
       "Title": "Beta Test",
@@ -77,11 +77,11 @@
       "Production": "N/A",
       "Website": "N/A",
       "Response": "True",
-      "rating_test": "20",
+      "rating_test": "42",
       "id": 2,
       "rating_yshp57@gmail.com": "5",
       "rating_tester": "100",
-      "comment_test": "Love this movie",
+      "comment_test": "rf",
       "comment_yshp57@gmail.com": "Test!"
     },
     {
@@ -119,8 +119,8 @@
       "Production": "N/A",
       "Website": "N/A",
       "Response": "True",
-      "rating_test": "15",
-      "comment_test": "This movie ROCKS!",
+      "rating_test": "32",
+      "comment_test": "d",
       "id": 3
     },
     {
@@ -200,6 +200,193 @@
       "rating_test": "1",
       "comment_test": "ddf",
       "id": 5
+    },
+    {
+      "Title": "The Attraction Test",
+      "Year": "2022",
+      "Rated": "TV-PG",
+      "Released": "07 Aug 2022",
+      "Runtime": "85 min",
+      "Genre": "Comedy, Romance",
+      "Director": "Ken Friss",
+      "Writer": "Brian Ruberry",
+      "Actors": "Tara Wilson, Andrew Dunbar, Glynis Davies",
+      "Plot": "A college professor prepares to unveil her study that sparks love between strangers, but when the launch is threatened when she's criticized for not taking \"The Dating Test\" herself, she can't hide from love any longer.",
+      "Language": "English",
+      "Country": "Canada",
+      "Awards": "N/A",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOWVhNjY2ZDAtNjY2OC00ZjFlLWI0MDUtNTlmZjRhMTBmZDVlXkEyXkFqcGdeQXVyMTQyNDk2NzE@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.2/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "6.2",
+      "imdbVotes": "471",
+      "imdbID": "tt18306248",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "rating_test": "93",
+      "comment_test": "Great!",
+      "id": 6
+    },
+    {
+      "Title": "Test",
+      "Year": "2013",
+      "Rated": "TV-MA",
+      "Released": "04 Apr 2014",
+      "Runtime": "89 min",
+      "Genre": "Drama, History, Romance",
+      "Director": "Chris Mason Johnson",
+      "Writer": "Chris Mason Johnson",
+      "Actors": "Scott Marlowe, Matthew Risch, Evan Boomer",
+      "Plot": "In 1985, a gay dance understudy hopes for his on-stage chance while fearing the growing AIDS epidemic.",
+      "Language": "English, Portuguese, French",
+      "Country": "United States",
+      "Awards": "3 wins & 3 nominations",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTQwMDU5NDkxNF5BMl5BanBnXkFtZTcwMjk5OTk4OQ@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.5/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "82%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "70/100"
+        }
+      ],
+      "Metascore": "70",
+      "imdbRating": "6.5",
+      "imdbVotes": "1,706",
+      "imdbID": "tt2407380",
+      "Type": "movie",
+      "DVD": "10 Aug 2016",
+      "BoxOffice": "$18,823",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "rating_test": "32",
+      "comment_test": "f",
+      "id": 7
+    },
+    {
+      "Title": "The Test",
+      "Year": "2012",
+      "Rated": "Not Rated",
+      "Released": "N/A",
+      "Runtime": "89 min",
+      "Genre": "Comedy",
+      "Director": "Jeremy Saville",
+      "Writer": "Jeremy Saville",
+      "Actors": "Jeremy Saville, Kelly Sullivan, Stephen Frejek",
+      "Plot": "A guy puts his unwitting bride-to-be through a series of increasingly bizarre \"stress tests\" to see if she's worthy of marriage.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "N/A",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTYwNTgzMjM5M15BMl5BanBnXkFtZTcwNDUzMTE1OA@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.1/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "6.1",
+      "imdbVotes": "1,192",
+      "imdbID": "tt1986180",
+      "Type": "movie",
+      "DVD": "25 Jul 2013",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "rating_test": "3",
+      "comment_test": "23",
+      "id": 8
+    },
+    {
+      "Title": "El Test",
+      "Year": "2022",
+      "Rated": "N/A",
+      "Released": "02 Sep 2022",
+      "Runtime": "105 min",
+      "Genre": "Comedy",
+      "Director": "Dani de la Orden",
+      "Writer": "Jordi Vallejo",
+      "Actors": "Miren Ibarguren, Alberto San Juan, Carlos Santos",
+      "Plot": "Based on the play by Jordi Vallejo, follows a group of people who must decide whether they want to get 100,000 euros now, or wait ten years to get one million.",
+      "Language": "Spanish",
+      "Country": "Spain",
+      "Awards": "1 nomination",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNDcxNTYxZDQtOTdlYi00ZDg1LWE1YjUtZTQ0NGEwMzQ0ODQ5XkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "5.9/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "5.9",
+      "imdbVotes": "773",
+      "imdbID": "tt15502648",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "rating_test": "3",
+      "comment_test": "ds",
+      "id": 9
+    },
+    {
+      "Title": "Test Pattern",
+      "Year": "2019",
+      "Rated": "N/A",
+      "Released": "12 Feb 2021",
+      "Runtime": "82 min",
+      "Genre": "Drama, Thriller",
+      "Director": "Shatara Michelle Ford",
+      "Writer": "Shatara Michelle Ford",
+      "Actors": "Brittany S. Hall, Will Brill, Gail Bean",
+      "Plot": "Test Pattern follows an interracial couple whose relationship is put to the test after a Black woman is sexually assaulted and her White boyfriend drives her from hospital to hospital in search of a rape kit.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "6 wins & 12 nominations",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOGIyYTBiYjQtNDg4Ny00MTVhLThhNzYtN2U0NTJhNDRjNjQ5XkEyXkFqcGdeQXVyMjQ5MzM4NzE@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.4/10"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "81/100"
+        }
+      ],
+      "Metascore": "81",
+      "imdbRating": "6.4",
+      "imdbVotes": "845",
+      "imdbID": "tt10121508",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "rating_test": "78",
+      "comment_test": "dfs",
+      "id": 10
     }
   ],
   "Users": [
