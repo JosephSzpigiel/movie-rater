@@ -1,10 +1,12 @@
 import { useState } from "react"
 
-function MovieCard({imdbObj, movie, setMyMovies}){
+function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
 
     const [showDetails, setShowDetails] = useState(false)
     const [movieDetails, setMovieDetails] = useState(movie)
     const {Poster, Title, Year, imdbID} = movie
+
+    const userRating = `rating_${currentUser.username}`
     
 
     function clickHandler(e){
@@ -14,7 +16,7 @@ function MovieCard({imdbObj, movie, setMyMovies}){
             fetch(`https://www.omdbapi.com/?i=${imdbID}&type=movie&apikey=${process.env.REACT_APP_API_KEY}`)
             .then(r => r.json())
             .then(movie => {
-                setMovieDetails({...movie,"rating":''})
+                setMovieDetails({...movie, [userRating]:''})
                 setShowDetails(current => !current)
         })
     }}
@@ -25,14 +27,14 @@ function MovieCard({imdbObj, movie, setMyMovies}){
             fetch(`http://localhost:3000/Movies/${imdbObj[imdbID]}`, {
                 method: 'PATCH',
                 headers: {'Content-type': 'application/json'},
-                body: JSON.stringify({'rating': movieDetails.rating}) 
+                body: JSON.stringify({[userRating] : movieDetails[userRating]}) 
             })
             .then(r => r.json())
             .then(movie => {
                 setMyMovies(movies => {
                     return (movies.map((arrayMovie) => {
                         if (arrayMovie.id === movie.id) {
-                            return{ ...arrayMovie, ['rating']: movie.rating}
+                            return{ ...arrayMovie, [userRating]: movie[userRating]}
                         } else {
                             return arrayMovie
                         }
@@ -52,21 +54,28 @@ function MovieCard({imdbObj, movie, setMyMovies}){
 
     function ratingHandler(e){
         setMovieDetails(curr => {
-            return {...curr, 'rating':e.target.value}
+            return {...curr, [userRating] :e.target.value}
         })
     }
 
     function handleRemove(e) {
         fetch(`http://localhost:3000/Movies/${movie.id}`, {
-            method: 'DELETE'
+            method: 'PATCH',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({[userRating] : ''})
         })
-        .then(r => {
-            setMyMovies(current => {
-                return current.filter(currMovie => {
-                    return currMovie.id !== movie.id
-                })
+        .then(r => r.json())
+        .then(movie => {
+            setMyMovies(movies => {
+                return (movies.map((arrayMovie) => {
+                    if (arrayMovie.id === movie.id) {
+                        return{ ...arrayMovie, [userRating]: ''}
+                    } else {
+                        return arrayMovie
+                    }
+                }))
             })
-        })
+        }) 
     }
 
     return(
@@ -80,7 +89,7 @@ function MovieCard({imdbObj, movie, setMyMovies}){
                     <div>
                         <form onSubmit={submitHandler}>
                             <label htmlFor='rating'>Rating from 1-100:</label>
-                            <input name ='rating' type="number" min={1} max={100} value={movieDetails.rating} onChange={ratingHandler}></input>
+                            <input name ='rating' type="number" min={1} max={100} value={movieDetails[userRating]} onChange={ratingHandler}></input>
                             <input type="submit"></input>
                         </form> 
                         <p>Plot: {movieDetails.Plot}</p>

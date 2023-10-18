@@ -18,6 +18,13 @@ function App() {
       imdbObj[myMovies[i].imdbID]= myMovies[i].id
   }
 
+  const userMovies  = myMovies.filter(movie  => {
+    if (movie[`rating_${currentUser.username}`] && movie[`rating_${currentUser.username}`] !== ''){
+      return true
+    }
+  })
+  
+
   useEffect(() => {
     fetch('http://localhost:3000/Users')
     .then(r => r.json())
@@ -37,7 +44,6 @@ function App() {
   }, [])
 
   const contextObj = {
-    myMovies, 
     setMyMovies, 
     imdbObj, 
     results, 
@@ -47,7 +53,8 @@ function App() {
     userObj, 
     setUserObj, 
     setCurrentUser, 
-    currentUser
+    currentUser,
+    userMovies
   }
 
   return (

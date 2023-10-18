@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function LoginForm({userObj, setCurrentUser}){
+function LoginForm({userObj, setCurrentUser, setResults, setSearchVal}){
 
     const initialValue = {'username': '', 'password': ''}
 
@@ -23,6 +23,8 @@ function LoginForm({userObj, setCurrentUser}){
         if(userInfo.username in userObj){
             if(userInfo.password === userObj[userInfo.username]){
                 setCurrentUser(userInfo)
+                setSearchVal('')
+                setResults([])
             }else{
                 alert('Error! Incorrect password!')
             }
