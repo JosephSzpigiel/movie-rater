@@ -7,6 +7,7 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
     const {Poster, Title, Year, imdbID} = movie
 
     const userRating = `rating_${currentUser.username}`
+    const userComment= `comment_${currentUser.username}`
     
 
     function clickHandler(e){
@@ -16,7 +17,7 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
             fetch(`https://www.omdbapi.com/?i=${imdbID}&type=movie&apikey=${process.env.REACT_APP_API_KEY}`)
             .then(r => r.json())
             .then(movie => {
-                setMovieDetails({...movie, [userRating]:''})
+                setMovieDetails({...movie, [userRating]:'', [userComment]:''})
                 setShowDetails(current => !current)
         })
     }}
@@ -27,14 +28,19 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
             fetch(`http://localhost:3000/Movies/${imdbObj[imdbID]}`, {
                 method: 'PATCH',
                 headers: {'Content-type': 'application/json'},
-                body: JSON.stringify({[userRating] : movieDetails[userRating]}) 
+                body: JSON.stringify(
+                    {
+                        [userRating] : movieDetails[userRating], 
+                        [userComment] : movieDetails[userComment]
+                    }
+                 ) 
             })
             .then(r => r.json())
             .then(movie => {
                 setMyMovies(movies => {
                     return (movies.map((arrayMovie) => {
                         if (arrayMovie.id === movie.id) {
-                            return{ ...arrayMovie, [userRating]: movie[userRating]}
+                            return{ ...arrayMovie, [userRating]: movie[userRating], [userComment]: movie[userComment]}
                         } else {
                             return arrayMovie
                         }
@@ -78,6 +84,12 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
         }) 
     }
 
+    function handleComment(e) {
+        setMovieDetails(current => {
+            return {...current, [userComment] : e.target.value}
+        })
+    }
+
     return(
         <div className="movie-card, card">
             <h2>{Title}</h2>
@@ -89,7 +101,8 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
                     <div>
                         <form onSubmit={submitHandler}>
                             <label htmlFor='rating'>Rating from 1-100:</label>
-                            <input name ='rating' type="number" min={1} max={100} value={movieDetails[userRating]} onChange={ratingHandler}></input>
+                            <input required name ='rating' type="number" min={1} max={100} value={movieDetails[userRating]} onChange={ratingHandler}></input>
+                            <textarea name='comment' type= "text" value={movieDetails[userComment]} onChange={handleComment}></textarea>
                             <input type="submit"></input>
                         </form> 
                         <p>Plot: {movieDetails.Plot}</p>

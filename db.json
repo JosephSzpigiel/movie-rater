@@ -42,8 +42,9 @@
       "userRating": "3",
       "id": 1,
       "rating_undefined": "",
-      "rating_test": "41",
-      "rating_yshp57@gmail.com": ""
+      "rating_test": "4",
+      "rating_yshp57@gmail.com": "",
+      "comment_test": "Great movie"
     },
     {
       "Title": "Beta Test",
@@ -80,7 +81,7 @@
       "id": 2,
       "rating_yshp57@gmail.com": "5",
       "rating_tester": "100",
-      "rating_test words": "3"
+      "comment_test": "Love this movie"
     }
   ],
   "Users": [
