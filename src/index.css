@@ -16,14 +16,13 @@ code {
 }
 
 .card {
-  /* Add shadows to create the "card" effect */
   width: 200px;
   min-height: 400px;
   border: double;
   text-align: center;
   padding: 10px;
   margin: 15px;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 .card img:hover {  border:2px solid green;  box-shadow: 0 0 10px #333;  -webkit-box-shadow: 0 0 10px #333;  -moz-box-shadow: 0 0 10px #333;  -o-box-shadow: 0 0 10px #333;  -ms-box-shadow: 0 0 10px #333;}
 
@@ -33,15 +32,10 @@ code {
   margin: 0 auto;
 }
 
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-/* Add some padding inside the card container */
 .container {
 
   display: flex;
+  flex-basis: 10em ;
   flex-flow: row wrap;
   max-width: 100%;
   min-width: 50%;
@@ -50,6 +44,5 @@ code {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
 
 }
