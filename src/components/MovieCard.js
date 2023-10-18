@@ -33,7 +33,7 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
                         [userRating] : movieDetails[userRating], 
                         [userComment] : movieDetails[userComment]
                     }
-                 ) 
+                ) 
             })
             .then(r => r.json())
             .then(movie => {
