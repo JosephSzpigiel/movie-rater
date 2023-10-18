@@ -68,14 +68,14 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
         fetch(`http://localhost:3000/Movies/${movie.id}`, {
             method: 'PATCH',
             headers: {'Content-type': 'application/json'},
-            body: JSON.stringify({[userRating] : ''})
+            body: JSON.stringify({[userRating] : '', [userComment]:''})
         })
         .then(r => r.json())
         .then(movie => {
             setMyMovies(movies => {
                 return (movies.map((arrayMovie) => {
                     if (arrayMovie.id === movie.id) {
-                        return{ ...arrayMovie, [userRating]: ''}
+                        return{ ...arrayMovie, [userRating]: '', [userComment]:''}
                     } else {
                         return arrayMovie
                     }
@@ -92,10 +92,13 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
 
     return(
         <div className="movie-card, card">
-            <h2>{Title}</h2>
+            <h2>{`${Title} (${Year})`}</h2>
             <img className='movie-image' src={Poster} onClick={clickHandler} sizes="auto"></img>
-            {movie.id ? <button onClick={handleRemove}>Remove</button> : null}
-            <p>{Year}</p>
+            {movie.id ? (
+                <div>
+                    <h3>Score: {movie[userRating]}/100</h3>
+                    <button onClick={handleRemove}>Remove</button>
+                </div>): null}
             {
                 showDetails ? (
                     <div>
