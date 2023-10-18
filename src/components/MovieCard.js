@@ -97,7 +97,6 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
             {movie.id ? (
                 <div>
                     <h3>Score: {movie[userRating]}/100</h3>
-                    <button onClick={handleRemove}>Remove</button>
                 </div>): null}
             {
                 showDetails ? (
@@ -109,6 +108,10 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
                             <input type="submit"></input>
                         </form> 
                         <p>Plot: {movieDetails.Plot}</p>
+                        {movie.id ? (
+                            <div>
+                                <button onClick={handleRemove}>Remove</button>
+                            </div>): null}
                     </div>
                 ) : null
             }
