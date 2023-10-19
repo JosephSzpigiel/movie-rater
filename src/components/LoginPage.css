@@ -1,0 +1,42 @@
+.main{
+    max-width: 350px;
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.submit-button{
+    height:40px;
+    width:200px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    border-radius: 5px
+}
+
+.input-button{
+    height:30px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-radius: 5px
+}
+
+.newuser-input{
+    font-size: 11pt;
+    height: 30px;
+    width : 250px;
+    margin-bottom: 15px;
+    border-radius: 5px
+}
+
+.register{
+    height:30px;
+    width:130px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    border-radius: 5px
+}

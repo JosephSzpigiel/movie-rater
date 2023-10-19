@@ -50,3 +50,40 @@ code {
   align-items: flex-start;
 
 }
+.user-info{
+  position: absolute; 
+  top: 10px;
+  right:20px; 
+  border: 2px solid white;
+  padding: 4px
+}
+
+.text-input{
+  font-size: 16pt;
+  height: 38px;
+  width : 300px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.search{
+  margin-top: 30px;
+}
+
+.submit{
+  color: white;
+  background-color: red;
+  height: 38px;
+  width : 300px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.label{
+  font-size: 20px;
+}
+
+select{
+  font-size: 18px;
+}

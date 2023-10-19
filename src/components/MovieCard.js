@@ -26,7 +26,7 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
     function submitHandler(e){
         e.preventDefault()
         if (imdbID in imdbObj) {
-            fetch(`http://localhost:3000/Movies/${imdbObj[imdbID]}`, {
+            fetch(`http://localhost:4000/Movies/${imdbObj[imdbID]}`, {
                 method: 'PATCH',
                 headers: {'Content-type': 'application/json'},
                 body: JSON.stringify(
@@ -105,7 +105,7 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
                 <div>
                     <h3>Score: {movie[userRating]}/100</h3>
                 </div>): null}
-            {submitted ? <p>Submitted!</p>:null}
+            {submitted ? <p>Saved!</p>:null}
             {
                 showDetails ? (
                     <div>

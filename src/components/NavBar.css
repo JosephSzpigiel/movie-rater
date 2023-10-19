@@ -2,6 +2,7 @@
     display: inline-block;
     box-sizing: border-box;
     width: 100px;
+    height: 30px;
     padding: 5px;
     margin: 0 6px 6px;
     background: blue;
@@ -12,5 +13,5 @@
 }
 
 .active {
-    color: red;
+    background: red;
 }
