@@ -1,11 +1,12 @@
 import NavBar from "./NavBar"
+import logo from '../assets/logo.png'
 
 function Header({currentUser}){
     return(
         <header>
-            <h1 className='header'>MovieRater</h1>
+            <img className = 'logo' src={logo}/>
             <NavBar />
-            {currentUser.username ? <p><b>User: </b>{currentUser.username}</p>: null }
+            {currentUser.username ? <p className="user-info"><b>User: </b>{currentUser.username}</p>: null }
         </header>
     )
 }
