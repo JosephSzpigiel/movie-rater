@@ -116,7 +116,7 @@ button.join-now:hover::before {
   left: 0;
 }
 
-.header:hover {
+.logo:hover {
   animation: rotate 1s linear;
 }
 
