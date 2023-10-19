@@ -28,7 +28,9 @@ code {
   border-radius: 5px;
   background: darkred;
 }
-.card img:hover {  border:2px solid blue;  box-shadow: 0 0 10px #333;  -webkit-box-shadow: 0 0 10px #333;  -moz-box-shadow: 0 0 10px #333;  -o-box-shadow: 0 0 10px #333;  -ms-box-shadow: 0 0 10px #333;}
+.card img:hover { box-shadow: 0 0 20px blue;  -webkit-box-shadow: 0 0 20px blue;  -moz-box-shadow: 0 0 20px blue;  -o-box-shadow: 0 0 20px blue;  -ms-box-shadow: 0 0 20px blue;}
+
+/* border:2px solid blue */
 
 .movie-image {
   width: 180px;
