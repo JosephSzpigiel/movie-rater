@@ -45,7 +45,7 @@ function MoviesContainer(){
             {currentUser.username ? (
             <div>
                 <input value={filter} onChange={searchHandler} placeholder="Search My Movies"></input>
-                <label htmlFor="sort" >Sort Movies:</label>
+                <label htmlFor="sort" > Sort Movies:</label>
                 <select name="sort" onChange={sortHandler}>
                     <option value='az'>A-Z</option>
                     <option value='za'>Z-A</option>
