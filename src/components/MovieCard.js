@@ -112,13 +112,13 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
                         <form onSubmit={submitHandler}>
                             <label htmlFor='rating'>Rating from 1-100:</label>
                             <input required name ='rating' type="number" min={1} max={100} value={movieDetails[userRating]} onChange={ratingHandler}></input>
-                            <textarea name='comment' type= "text" value={movieDetails[userComment]} onChange={handleComment}></textarea>
-                            <input type="submit"></input>
+                            <textarea placeholder='Leave a comment' name='comment' type= "text" value={movieDetails[userComment]} onChange={handleComment}></textarea>
+                            <input className='form-submit' type="submit"></input>
                         </form> 
                         <p>Plot: {movieDetails.Plot}</p>
                         {movie.id ? (
                             <div>
-                                <button onClick={handleRemove}>Remove</button>
+                                <button className="join-now" onClick={handleRemove}>Remove</button>
                             </div>): null}
                     </div>
                 ) : null
