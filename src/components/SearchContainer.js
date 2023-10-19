@@ -45,7 +45,7 @@ function SearchContainer(){
     })
 
     function SeeMore(){
-        return page < totalPages ? <button onClick={handleMore}>See More</button> : <p>No More Results</p>
+        return page < totalPages ? <button className='submit' onClick={handleMore}>See More</button> : <p>No More Results</p>
     }
 
     return(
@@ -53,8 +53,9 @@ function SearchContainer(){
             {currentUser.username ?  
                 <div>
                     <form onSubmit = {submitHandler}>
-                        <input placeholder="Search Movie" value={search} onChange={changeHandler}></input>
-                        <input type="submit"></input>
+                        <input required className="text-input search" placeholder="Search Movie" value={search} onChange={changeHandler}></input>
+                        <br></br>
+                        <input className= "submit" type="submit" value="Search"></input>
                     </form>
                     {(searchVal !== '')? (
                         <div>
