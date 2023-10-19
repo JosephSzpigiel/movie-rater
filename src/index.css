@@ -137,3 +137,14 @@ button.join-now:hover::before {
 .see-more{
   margin-bottom: 30px;
 }
+
+.form{
+  padding-top: 30px;
+  background-color: darkred;
+  border-radius: 5px;
+  border: solid white;
+}
+
+.register-button{
+  margin-top:20px
+}

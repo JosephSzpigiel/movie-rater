@@ -42,7 +42,7 @@ function CreateUserForm({userObj, setUserObj, setCurrentUser, setResults, setSea
     }
 
     return(
-        <form onSubmit={handleCreate}>
+        <form className = 'form' onSubmit={handleCreate}>
             <input className= 'newuser-input' required name= 'username' value = {userInfo.username} onChange = {handleChange} placeholder="New User Name"/>
             <input className= 'newuser-input'  required name= 'password' value = {userInfo.password} onChange = {handleChange} type= "password" placeholder="Set Password"/>
             <input className = 'register' type="submit" value="Register"/>

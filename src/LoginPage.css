@@ -24,10 +24,11 @@
 }
 
 .newuser-input{
-    font-size: 11pt;
+    font-size: 13pt;
     height: 30px;
     width : 250px;
     margin-bottom: 15px;
+    text-align: center
 }
 
 .register{

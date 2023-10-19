@@ -28,7 +28,7 @@ function LoginPage(){
                 <div>
                     {/* <h2>Login:</h2> */}
                     <LoginForm userObj={userObj} setUserObj={setUserObj} setCurrentUser={setCurrentUser} setResults={setResults} setSearchVal={setSearchVal}/>
-                    <button onClick={()=> (setRegister(cur => !cur))} className='input-button'>Create an Account</button>
+                    <button onClick={()=> (setRegister(cur => !cur))} className='input-button register-button'>Create an Account</button>
                     {/* <h3>If you don't have an account, create a user here:</h3> */}
                     {register ? <CreateUserForm userObj={userObj} setUserObj={setUserObj} setCurrentUser={setCurrentUser} setResults={setResults} setSearchVal={setSearchVal}/> :  null}
                 </div>

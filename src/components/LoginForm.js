@@ -34,7 +34,7 @@ function LoginForm({userObj, setCurrentUser, setResults, setSearchVal}){
     }
 
     return(
-        <form onSubmit={handleLogin}>
+        <form className = 'form' onSubmit={handleLogin}>
             <input className="text-input" required name= 'username' value = {userInfo.username} onChange = {handleChange} placeholder="User Name"/>
             <input className="text-input" required name= 'password' value = {userInfo.password} onChange = {handleChange} type= "password" placeholder="Password"/>
             <input className= "submit-button" type="submit" value="Login"/>
