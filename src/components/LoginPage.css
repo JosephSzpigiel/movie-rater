@@ -12,7 +12,8 @@
     font-weight: bold;
     margin-bottom: 30px;
     margin-top: 10px;
-    border-radius: 5px
+    background-color: red;
+    color: white;
 }
 
 .input-button{
@@ -20,7 +21,6 @@
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 20px;
-    border-radius: 5px
 }
 
 .newuser-input{
@@ -28,7 +28,6 @@
     height: 30px;
     width : 250px;
     margin-bottom: 15px;
-    border-radius: 5px
 }
 
 .register{
@@ -38,5 +37,6 @@
     font-weight: bold;
     margin-bottom: 30px;
     margin-top: 10px;
-    border-radius: 5px
+    background-color: red;
+    color: white;
 }

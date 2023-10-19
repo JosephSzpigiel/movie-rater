@@ -1,6 +1,7 @@
 import { useOutletContext } from "react-router-dom"
 import {useState} from "react"
 import MovieCard from "./MovieCard"
+import SearchSort from "./SearchSort"
 
 function MoviesContainer(){
 
@@ -44,15 +45,7 @@ function MoviesContainer(){
         <div>
             {currentUser.username ? (
             <div>
-                <input className="text-input search" value={filter} onChange={searchHandler} placeholder="Search My Movies"></input>
-                <br></br>
-                <label className= 'label' htmlFor="sort" >Sort Movies: </label>
-                <select name="sort" onChange={sortHandler}>
-                    <option value='az'>A-Z</option>
-                    <option value='za'>Z-A</option>
-                    <option value='highLow'>High to Low</option>
-                    <option value='lowHigh'>Low to High</option>
-                </select>
+                <SearchSort searchHandler ={searchHandler} sortHandler={sortHandler} filter={filter}/>
                 <div className='container'> {movieComponents} </div> 
             </div>)
             : <h2>Please login to see your movies!</h2>}

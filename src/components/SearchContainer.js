@@ -45,7 +45,7 @@ function SearchContainer(){
     })
 
     function SeeMore(){
-        return page < totalPages ? <button className='submit' onClick={handleMore}>See More</button> : <p>No More Results</p>
+        return page < totalPages ? <button className='submit see-more' onClick={handleMore}>See More</button> : <p>No More Results</p>
     }
 
     return(
