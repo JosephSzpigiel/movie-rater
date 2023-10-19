@@ -2,7 +2,7 @@ import LoginForm from "./LoginForm"
 import CreateUserForm from "./CreateUserForm"
 import {useOutletContext} from "react-router-dom"
 import { useState } from "react";
-import "../LoginPage.css";
+import "../css/LoginPage.css";
 
 function LoginPage(){
 
