@@ -44,6 +44,10 @@ function SearchContainer(){
         return <MovieCard key= {movie.imdbID} movie={movie} setMyMovies={setMyMovies} imdbObj={imdbObj} currentUser={currentUser}/>
     })
 
+    function SeeMore(){
+        return page < totalPages ? <button onClick={handleMore}>See More</button> : <p>No More Results</p>
+    }
+
     return(
         <div>
             {currentUser.username ?  
@@ -56,11 +60,11 @@ function SearchContainer(){
                         <div>
                             <h2>Results: {`${searchVal}`}</h2>
                             <div className="container">{movieComponents}</div>
-                            {page < totalPages ? <button onClick={handleMore}>See More</button> : <p>No More Results</p>}
+                            {movieComponents.length !== 0 ? (<SeeMore/>) : null}
                         </div>
                     ): null
                     }
-                    {(error !== '') ? (<div>{error}</div>):  null}
+                    {(movieComponents.length === 0) ? (<div>{error}</div>):  null}
                 </div>
                 : <h2>Please login to search for movies!</h2>}
         </div>

@@ -387,6 +387,94 @@
       "rating_test": "78",
       "comment_test": "dfs",
       "id": 10
+    },
+    {
+      "Title": "Pride & Prejudice",
+      "Year": "2005",
+      "Rated": "PG",
+      "Released": "23 Nov 2005",
+      "Runtime": "129 min",
+      "Genre": "Drama, Romance",
+      "Director": "Joe Wright",
+      "Writer": "Deborah Moggach, Jane Austen, Emma Thompson",
+      "Actors": "Keira Knightley, Matthew Macfadyen, Brenda Blethyn",
+      "Plot": "Sparks fly when spirited Elizabeth Bennet meets single, rich, and proud Mr. Darcy. But Mr. Darcy reluctantly finds himself falling in love with a woman beneath his class. Can each overcome their own pride and prejudice?",
+      "Language": "English",
+      "Country": "France, United Kingdom, United States",
+      "Awards": "Nominated for 4 Oscars. 13 wins & 59 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTA1NDQ3NTcyOTNeQTJeQWpwZ15BbWU3MDA0MzA4MzE@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.8/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "87%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "82/100"
+        }
+      ],
+      "Metascore": "82",
+      "imdbRating": "7.8",
+      "imdbVotes": "317,633",
+      "imdbID": "tt0414387",
+      "Type": "movie",
+      "DVD": "12 Feb 2014",
+      "BoxOffice": "$38,405,088",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "rating_sarahereiss@gmail.com": "60",
+      "comment_sarahereiss@gmail.com": "Too fast!",
+      "id": 11,
+      "rating_test": "5",
+      "comment_test": "asd"
+    },
+    {
+      "Title": "Nope",
+      "Year": "2022",
+      "Rated": "R",
+      "Released": "22 Jul 2022",
+      "Runtime": "130 min",
+      "Genre": "Horror, Mystery, Sci-Fi",
+      "Director": "Jordan Peele",
+      "Writer": "Jordan Peele",
+      "Actors": "Daniel Kaluuya, Keke Palmer, Brandon Perea",
+      "Plot": "The residents of a lonely gulch in inland California bear witness to an uncanny and chilling discovery.",
+      "Language": "English, Spanish",
+      "Country": "Canada, Japan, United States",
+      "Awards": "29 wins & 146 nominations",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMGIyNTI3NWItNTJkOS00MGYyLWE4NjgtZDhjMWQ4Y2JkZTU5XkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.8/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "83%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "77/100"
+        }
+      ],
+      "Metascore": "77",
+      "imdbRating": "6.8",
+      "imdbVotes": "243,902",
+      "imdbID": "tt10954984",
+      "Type": "movie",
+      "DVD": "18 Nov 2022",
+      "BoxOffice": "$123,277,080",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True",
+      "rating_sarahereiss@gmail.com": "",
+      "comment_sarahereiss@gmail.com": "",
+      "id": 12
     }
   ],
   "Users": [
@@ -429,6 +517,11 @@
       "username": "test words",
       "password": "test",
       "id": 8
+    },
+    {
+      "username": "sarahereiss@gmail.com",
+      "password": "sarah123",
+      "id": 9
     }
   ]
 }

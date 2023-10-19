@@ -29,7 +29,7 @@ function App() {
   
 
   useEffect(() => {
-    fetch('http://localhost:3000/Users')
+    fetch('http://localhost:4000/Users')
     .then(r => r.json())
     .then(users => {
       const usersObj ={}
@@ -41,7 +41,7 @@ function App() {
   }, [])
 
   useEffect(()=> {
-    fetch('http://localhost:3000/Movies')
+    fetch('http://localhost:4000/Movies')
     .then(r => r.json())
     .then(movies => setMyMovies(movies))
   }, [])

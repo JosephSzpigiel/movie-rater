@@ -6,14 +6,9 @@ function MoviesContainer(){
 
     const {userMovies, setMyMovies, imdbObj, currentUser}= useOutletContext()
     const [sort, setSort] = useState('az')
+    const [filter, setFilter] = useState('')
 
     let sortedMovies = []
-
-    // if(sort === 'az'){
-    //     sortedMovies = userMovies.sort((a,b) => a.Title > b.Title ? 1 : -1)
-    // }else if(sort === 'za'){
-    //     sortedMovies = userMovies.sort((a,b) => a.Title > b.Title ? -1 : 1)
-    // }else if(sort === )
 
     switch(sort){
         case 'az':
@@ -29,7 +24,11 @@ function MoviesContainer(){
             sortedMovies = userMovies.sort((a,b) => a[`rating_${currentUser.username}`] - b[`rating_${currentUser.username}`])
     }
 
-    const movieComponents= sortedMovies.map(movie => {
+    let filteredMovies = sortedMovies.filter(movie =>{
+        return movie.Title.toLowerCase().includes(filter.toLowerCase())
+    })
+
+    const movieComponents= filteredMovies.map(movie => {
         return <MovieCard key= {movie.id} movie={movie} setMyMovies= {setMyMovies} imdbObj={imdbObj} currentUser={currentUser}/>
     })
 
@@ -37,10 +36,15 @@ function MoviesContainer(){
         setSort(e.target.value)
     }
 
+    function searchHandler(e){
+        setFilter(e.target.value)
+    }
+
     return(
         <div>
             {currentUser.username ? (
             <div>
+                <input value={filter} onChange={searchHandler} placeholder="Search My Movies"></input>
                 <label htmlFor="sort" >Sort Movies:</label>
                 <select name="sort" onChange={sortHandler}>
                     <option value='az'>A-Z</option>

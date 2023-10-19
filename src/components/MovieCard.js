@@ -51,7 +51,7 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
                 setSubmitted(true)
             }) 
         } else{
-            fetch('http://localhost:3000/Movies', {
+            fetch('http://localhost:4000/Movies', {
                 method: 'POST',
                 headers: {'Content-type': 'application/json'},
                 body: JSON.stringify(movieDetails)
@@ -72,7 +72,7 @@ function MovieCard({imdbObj, movie, setMyMovies, currentUser}){
     }
 
     function handleRemove(e) {
-        fetch(`http://localhost:3000/Movies/${movie.id}`, {
+        fetch(`http://localhost:4000/Movies/${movie.id}`, {
             method: 'PATCH',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({[userRating] : '', [userComment]:''})

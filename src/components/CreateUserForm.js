@@ -23,7 +23,7 @@ function CreateUserForm({userObj, setUserObj, setCurrentUser, setResults, setSea
         if(userInfo.username in userObj){
             alert('Error! User Already Exists!')
         }else{
-            fetch('http://localhost:3000/Users', {
+            fetch('http://localhost:4000/Users', {
                 method: 'POST',
                 headers: {'Content-Type' : 'application/json'},
                 body: JSON.stringify(userInfo)
