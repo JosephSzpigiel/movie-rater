@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The movie data comes from the Open Movie Database API (https://www.omdbapi.com/)
 
-Our project allows you to:
+This project allows you to:
  1. Create an account
  2. Login
  3. Search for movie by movie title
